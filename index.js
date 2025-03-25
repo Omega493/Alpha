@@ -92,25 +92,3 @@ const rest = new REST({ version: '10' }).setToken(token);
         console.error(error);
     }
 })();
-
-// ------------------------ FUN COMMANDS ------------------------ //
-client.on('messageCreate', async (message) => {
-    if (message.author.bot) return;
-
-    if (message.content.toLowerCase() === 'c!ping') {
-        const sent = await message.reply('Pong!');
-        const ping = sent.createdTimestamp - message.createdTimestamp;
-        sent.edit(`> Pong! 🏓 Latency is ${ping}ms.`);
-    }
-
-    if (message.author.id === userID1) {
-        if (message.content.toLowerCase().includes('haha')) {
-            message.reply('no "haha" for u');
-            message.channel.send('https://media.tenor.com/x8v1oNUOmg4AAAAM/rickroll-roll.gif');
-            message.channel.send('lmao noob');
-        }
-        if (message.content.toLowerCase().includes('wtf')) {
-            message.reply('no');
-        }
-    }
-});
