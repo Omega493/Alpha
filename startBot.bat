@@ -1,6 +1,4 @@
 @echo off
-echo Installing missing dependencies...
-node installMissingDeps.js
 
 echo Deleting global commands...
 node deleteGlobalCommands.js
