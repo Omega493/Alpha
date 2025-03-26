@@ -1,5 +1,5 @@
-require('dotenv').config({ path: 'changli.env' });
 const { REST, Routes } = require('discord.js');
+require('dotenv').config({ path: 'alpha.env' });
 
 const token = process.env.DISCORD_BOT_TOKEN;
 const clientId = process.env.DISCORD_CLIENT_ID;
